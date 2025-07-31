@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javi Design - Precios</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --primary: #1e1e1e;
+      --accent: #facc15;
+      --text: #f5f5f5;
+      --bg: #111;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+    header {
+      background-color: var(--primary);
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    nav a {
+      color: var(--text);
+      margin-left: 1rem;
+      text-decoration: none;
+    }
+    .hero {
+      text-align: left;
+      padding: 4rem 2rem;
+      background: linear-gradient(to bottom, #222, #111);
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    .section {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .price-table {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .price-card {
+      background: #1b1b1b;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .price-card h3 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+    .price-card p {
+      color: #ccc;
+      text-align: center;
+    }
+    .price-card .precio {
+      font-size: 1.8rem;
+      color: var(--accent);
+      margin: 1rem 0;
+    }
+    footer {
+      background-color: #1a1a1a;
+      padding: 1rem;
+      text-align: center;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Javi Design</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="precios.html">Precios</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Precios</h2>
+    <p>Ofrezco diseño profesional accesible y adaptado a cada necesidad.</p>
+  </section>
+
+  <section class="section">
+    <div class="price-table">
+      <div class="price-card">
+        <h3>Flyer</h3>
+        <p>Diseño llamativo ideal para eventos, promociones o negocios.</p>
+        <div class="precio">$4.999</div>
+      </div>
+      <div class="price-card">
+        <h3>Currículum</h3>
+        <p>CV profesional con estética clara y moderna.</p>
+        <div class="precio">$2.500</div>
+      </div>
+      <div class="price-card">
+        <h3>Post para redes</h3>
+        <p>Diseños visuales que atraen más interacción en Instagram o Facebook.</p>
+        <div class="precio">$2.999</div>
+      </div>
+      <div class="price-card">
+        <h3>Identidad visual</h3>
+        <p>Paleta de colores, tipografía, logo básico, estilo unificado.</p>
+        <div class="precio">$7.999</div>
+      </div>
+      <div class="price-card">
+        <h3>Membresía mensual</h3>
+        <p>Incluye 10 diseños a elección por mes + trato exclusivo y personalizado.</p>
+        <div class="precio">$24.999</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Javi Design - Todos los derechos reservados
+  </footer>
+</body>
+</html>

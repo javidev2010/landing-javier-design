@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Javi Design</title>
+  <style>
+    :root {
+      --primary: #1e1e1e;
+      --accent: #facc15;
+      --text: #f5f5f5;
+      --bg: #111;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+    header {
+      background-color: var(--primary);
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    nav a {
+      color: var(--text);
+      margin-left: 1rem;
+      text-decoration: none;
+    }
+    .section {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .stack-gallery {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 4rem;
+    }
+
+    .stack {
+      position: relative;
+      width: 270px;
+      height: 420px;
+      overflow: hidden;
+      transition: height 0.4s ease;
+    }
+
+    .stack img {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+      transition: transform 0.5s ease, z-index 0.5s;
+    }
+
+    .stack img:nth-child(1) {
+      top: 0;
+      z-index: 3;
+    }
+
+    .stack img:nth-child(2) {
+      top: 20px;
+      z-index: 2;
+    }
+
+    .stack img:nth-child(3) {
+      top: 40px;
+      z-index: 1;
+    }
+
+    .stack:hover {
+      height: 1000px;
+    }
+
+    .stack:hover img:nth-child(1) {
+      transform: translateY(0px);
+    }
+
+    .stack:hover img:nth-child(2) {
+      transform: translateY(340px);
+    }
+
+    .stack:hover img:nth-child(3) {
+      transform: translateY(680px);
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      padding: 1rem;
+      text-align: center;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Javi Design</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="precios.html">Precios</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h2>Portfolio</h2>
+    <div class="stack-gallery">
+      <div class="stack">
+        <img src="Imagenes/Terminado1bg.jpg" alt="Proyecto 1" />
+        <img src="Imagenes/Terminado2bg.jpg" alt="Proyecto 2" />
+        <img src="Imagenes/Terminado3bg.jpg" alt="Proyecto 3" />
+      </div>
+      <div class="stack">
+        <img src="Imagenes/ejemplo4.jpg" alt="Proyecto 4" />
+        <img src="Imagenes/ejemplo5.jpg" alt="Proyecto 5" />
+        <img src="Imagenes/ejemplo6.jpg" alt="Proyecto 6" />
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Javi Design - Todos los derechos reservados
+  </footer>
+</body>
+</html>

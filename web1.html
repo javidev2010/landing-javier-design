@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page Express - Mockup Negocio</title>
+<style>
+  :root {
+    --bg: #f4f4f4;
+    --primary: #ffffff;
+    --accent: #ff9900;
+    --text: #333;
+    --shadow: rgba(0,0,0,0.15);
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+  }
+  header {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 6px var(--shadow);
+    flex-wrap: wrap;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--accent);
+  }
+  header nav a {
+    color: var(--text);
+    margin-left: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  header nav a:hover {
+    color: var(--accent);
+  }
+
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(120deg, #fff3e0, #ffe0b2);
+  }
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .hero a {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .hero a:hover {
+    background-color: #e68a00;
+  }
+
+  /* Secciones funcionales simuladas */
+  .mock-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 4rem 2rem;
+    gap: 20px;
+  }
+  .mock-card {
+    background-color: var(--primary);
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1 1 250px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 12px var(--shadow);
+    transition: transform 0.3s ease;
+  }
+  .mock-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px var(--shadow);
+  }
+  .mock-card h3 {
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .mock-card p {
+    color: #666;
+  }
+
+  /* Botones de acción simulados */
+  .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: var(--accent);
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .btn:hover {
+    background-color: #e68a00;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--primary);
+    box-shadow: 0 -2px 6px var(--shadow);
+    color: #666;
+  }
+
+  /* Responsive */
+  @media(max-width:600px){
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    header nav {
+      margin-top: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    header nav a {
+      margin: 0 10px;
+    }
+    .mock-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Mi Negocio</h1>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Servicios</a>
+    <a href="#">Contacto</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Bienvenido a nuestro servicio</h2>
+  <p>Landing page demostrativa con secciones de negocio, botones y contenido visual simulado, es totalmente personalizado y se le puede poner el contenido y diseño que uno quiera.</p>
+  <a href="#">Ver más</a>
+</section>
+
+<section class="mock-section">
+  <div class="mock-card">
+    <h3>Sobre nosotros</h3>
+    <p>Pequeña descripción de la empresa, misión y valores.</p>
+    <a href="#" class="btn">Leer más</a>
+  </div>
+  <div class="mock-card">
+    <h3>Servicios</h3>
+    <p>Listado de servicios principales, con iconos y breve explicación.</p>
+    <a href="#" class="btn">Ver servicios</a>
+  </div>
+  <div class="mock-card">
+    <h3>Contacto</h3>
+    <p>Formulario de contacto, WhatsApp o email para que los clientes puedan comunicarse.</p>
+    <a href="#" class="btn">Contactar</a>
+  </div>
+</section>
+
+<footer>
+  © 2025 Mi Negocio - Mockup Web
+</footer>
+
+</body>
+</html>

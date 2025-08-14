@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda Online Básica - Mockup</title>
+<style>
+  :root {
+    --bg: #f5f6fa;
+    --primary: #ffffff;
+    --accent: #f39c12;
+    --text: #333;
+    --shadow: rgba(0,0,0,0.1);
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+  }
+  header {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 6px var(--shadow);
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  header nav a {
+    color: var(--text);
+    margin-left: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  header nav a:hover {
+    background-color: var(--accent);
+    color: #fff;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(120deg, #ffe8d6, #ffecd1);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .hero h2 {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #555;
+  }
+
+  section {
+    padding: 4rem 2rem;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: var(--accent);
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+  }
+  .product-card {
+    background-color: var(--primary);
+    border-radius: 16px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 6px 18px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px var(--shadow);
+  }
+  .product-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+  .product-card h3 {
+    margin: 10px 0 5px 0;
+    font-size: 1.2rem;
+    color: var(--accent);
+  }
+  .product-card p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 0.95rem;
+  }
+  .price {
+    font-weight: 700;
+    color: var(--accent);
+    margin-top: 5px;
+  }
+  .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 18px;
+    background-color: var(--accent);
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .btn:hover {
+    background-color: #d37f0a;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--primary);
+    box-shadow: 0 -2px 6px var(--shadow);
+    color: #555;
+  }
+
+  @media(max-width:600px){
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    header nav {
+      margin-top: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    header nav a {
+      margin: 5px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Tienda Básica</h1>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Productos</a>
+    <a href="#">Nosotros</a>
+    <a href="#">Contacto</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Mockup de Tienda Online</h2>
+  <p>Ejemplo de tienda con productos, precios y carrito simulado para mostrar funcionalidades, tambien puede incluir pasarela de pago.</p>
+</section>
+
+<section>
+  <h2 class="section-title">Productos Destacados</h2>
+  <div class="products">
+    <div class="product-card">
+      <img src="producto1.jpg" alt="Producto 1">
+      <h3>Producto 1</h3>
+      <p>Descripción breve del producto.</p>
+      <div class="price">$50 USD</div>
+      <a href="#" class="btn">Agregar al carrito</a>
+    </div>
+    <div class="product-card">
+      <img src="producto2.jpg" alt="Producto 2">
+      <h3>Producto 2</h3>
+      <p>Descripción breve del producto.</p>
+      <div class="price">$70 USD</div>
+      <a href="#" class="btn">Agregar al carrito</a>
+    </div>
+    <div class="product-card">
+      <img src="producto3.jpg" alt="Producto 3">
+      <h3>Producto 3</h3>
+      <p>Descripción breve del producto.</p>
+      <div class="price">$35 USD</div>
+      <a href="#" class="btn">Agregar al carrito</a>
+    </div>
+    <div class="product-card">
+      <img src="producto4.jpg" alt="Producto 4">
+      <h3>Producto 4</h3>
+      <p>Descripción breve del producto.</p>
+      <div class="price">$80 USD</div>
+      <a href="#" class="btn">Agregar al carrito</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Contacto</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Email</h3>
+      <p>contacto@tiendabasicamockup.com</p>
+    </div>
+    <div class="card">
+      <h3>WhatsApp</h3>
+      <p>+54 11 60583782</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 Tienda Básica - Mockup Web
+</footer>
+
+</body>
+</html>

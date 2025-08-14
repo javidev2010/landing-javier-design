@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio - Javi Design</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javi Design - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     :root {
       --primary: #1e1e1e;
       --accent: #facc15;
       --text: #f5f5f5;
       --bg: #111;
+      --card-bg: #1b1b1b;
+      --shadow: rgba(0,0,0,0.3);
     }
     body {
       margin: 0;
@@ -23,6 +26,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
     header h1 {
       margin: 0;
@@ -33,66 +37,78 @@
       margin-left: 1rem;
       text-decoration: none;
     }
+
+    .hero {
+      text-align: left;
+      padding: 4rem 2rem;
+      background: linear-gradient(to bottom, #222, #111);
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
     .section {
       padding: 2rem;
       max-width: 1100px;
       margin: auto;
     }
-    .stack-gallery {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 4rem;
+
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
     }
 
-    .stack {
-      position: relative;
-      width: 270px;
-      height: 420px;
-      overflow: hidden;
-      transition: height 0.4s ease;
-    }
-
-    .stack img {
-      position: absolute;
-      width: 100%;
-      height: auto;
-      aspect-ratio: 4/5;
-      object-fit: cover;
+    .project-card {
+      background: var(--card-bg);
       border-radius: 12px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-      transition: transform 0.5s ease, z-index 0.5s;
+      overflow: hidden;
+      box-shadow: 0 0 10px var(--shadow);
+      transition: transform 0.2s;
+      display: flex;
+      flex-direction: column;
     }
-
-    .stack img:nth-child(1) {
-      top: 0;
-      z-index: 3;
+    .project-card:hover {
+      transform: translateY(-5px);
     }
-
-    .stack img:nth-child(2) {
-      top: 20px;
-      z-index: 2;
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
     }
-
-    .stack img:nth-child(3) {
-      top: 40px;
-      z-index: 1;
+    .project-card .info {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
-
-    .stack:hover {
-      height: 1000px;
+    .project-card .info h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
     }
-
-    .stack:hover img:nth-child(1) {
-      transform: translateY(0px);
+    .project-card .info p {
+      color: #ccc;
+      flex: 1;
     }
-
-    .stack:hover img:nth-child(2) {
-      transform: translateY(340px);
+    .project-card .info a {
+      margin-top: 1rem;
+      background: var(--accent);
+      color: var(--primary);
+      text-align: center;
+      padding: 8px 0;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background 0.3s;
     }
-
-    .stack:hover img:nth-child(3) {
-      transform: translateY(680px);
+    .project-card .info a:hover {
+      background: #d6ad12;
     }
 
     footer {
@@ -101,6 +117,23 @@
       text-align: center;
       color: #888;
       font-size: 0.9rem;
+    }
+
+    @media(max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      nav a {
+        margin: 5px 10px;
+      }
     }
   </style>
 </head>
@@ -114,19 +147,38 @@
     </nav>
   </header>
 
+  <section class="hero">
+    <h2>Portfolio Web</h2>
+    <p>Proyectos web realizados: landing pages, páginas profesionales y tiendas online.</p>
+  </section>
+
   <section class="section">
-    <h2>Portfolio</h2>
-    <div class="stack-gallery">
-      <div class="stack">
-        <img src="Terminado1bg.jpg" alt="Proyecto 1" />
-        <img src="Terminado2bg.jpg" alt="Proyecto 2" />
-        <img src="Terminado3bg.jpg" alt="Proyecto 3" />
+    <div class="portfolio">
+      <div class="project-card">
+        <img src="web1.png" alt="Landing Page Express">
+        <div class="info">
+          <h3>Landing Page Express</h3>
+          <p>Una página rápida con 1-2 secciones, diseño profesional y botón WhatsApp integrado.</p>
+          <a href="web1.html">Ver proyecto</a>
+        </div>
       </div>
-      <div class="stack">
-        <img src="ejemplo4.jpg" alt="Proyecto 4" />
-        <img src="ejemplo5.jpg" alt="Proyecto 5" />
-        <img src="ejemplo6.jpg" alt="Proyecto 6" />
+
+      <div class="project-card">
+        <img src="web2.png" alt="Página Profesional">
+        <div class="info">
+          <h3>Página Profesional</h3>
+          <p>Web completa de 4-5 secciones, adaptada a negocios con galería y sección de contacto.</p>
+          <a href="web2.html">Ver proyecto</a>
+        </div>
       </div>
+
+      <div class="project-card">
+        <img src="web3.png" alt="Tienda Online">
+        <div class="info">
+          <h3>Tienda Online</h3>
+          <p>Catálogo de hasta 20 productos, carrito de compras y pasarela de pago configurada.</p>
+          <a href="web3.html">Ver proyecto</a>
+        </div>
     </div>
   </section>
 
